@@ -23,7 +23,7 @@ const COLUMNS = [
 const SingleResult = ({ result }) => (
   <tr>
     {COLUMNS.map(col => (
-      <td key={col.key}>{result[col.key]}</td>
+      <td key={col.key}>{result[col.key] || '-'}</td>
     ))}
   </tr>
 )
