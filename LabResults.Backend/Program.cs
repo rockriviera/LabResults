@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-string filePath = builder.Configuration["LabResultsFilePath"]!;
+string filePath = builder.Configuration["LabResultsFilePath"] ?? "Labresult.txt";
 builder.Services.AddSingleton<ILabRecordService>(new LabRecordService(filePath));
 
 var app = builder.Build();
